@@ -8,4 +8,8 @@ public class CuentaBancaria {
 		return this.cant;
 	}
 
+	public void depositar(double i) {
+		this.cant+=i;
+	}
+
 }
