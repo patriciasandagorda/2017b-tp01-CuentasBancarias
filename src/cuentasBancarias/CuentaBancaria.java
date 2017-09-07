@@ -12,17 +12,23 @@ public class CuentaBancaria {
 		this.cant += monto;
 	}
 
-	public void transferirMontohacia(double monto, CuentaBancaria dest) {
+	public boolean transferirMontohacia(double monto, CuentaBancaria dest) {
 
 		if (this.cant >= monto) {
 			dest.cant += monto;
 			this.cant -= monto;
+			return true;
 		}
+		return false;
 	}
 
-	public void extraer(double monto) {
-		if (this.cant >= monto)
+	public boolean extraer(double monto) {
+		if (this.cant >= monto) {
 			this.cant -= monto;
+			return true;
+		}
+		return false;
+
 	}
 
 }
