@@ -12,4 +12,8 @@ public class CuentaBancaria {
 		this.cant+=i;
 	}
 
+	public void transferirMontohacia(double i, CuentaBancaria dest) {
+		dest.cant+=i;
+	}
+
 }
