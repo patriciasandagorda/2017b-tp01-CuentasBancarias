@@ -2,6 +2,8 @@ package cuentaBancaria;
 
 import org.junit.Test;
 
+import cuentasBancarias.CuentaBancaria;
+
 public class CuentasBancariasTests {
 	
 	@Test
