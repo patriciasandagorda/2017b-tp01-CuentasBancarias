@@ -8,17 +8,16 @@ public class CuentaBancaria {
 		return this.cant;
 	}
 
-	public void depositar(double i) {
-		this.cant+=i;
+	public void depositar(double monto) {
+		this.cant += monto;
 	}
 
-	public void transferirMontohacia(double i, CuentaBancaria dest) {
-		
-		if(this.cant>=i)
-			{
-			dest.cant+=i;
-			this.cant-=i;
-			}
+	public void transferirMontohacia(double monto, CuentaBancaria dest) {
+
+		if (this.cant >= monto) {
+			dest.cant += monto;
+			this.cant -= monto;
+		}
 	}
 
 }
