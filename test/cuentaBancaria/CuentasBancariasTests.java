@@ -27,5 +27,7 @@ public class CuentasBancariasTests {
 		cuenta1.depositar(1000);
 		cuenta1.transferirMontohacia(100, dest);
 		Assert.assertEquals(100, dest.mostrar(), 0);
+		cuenta1.transferirMontohacia(1000, dest);
+		Assert.assertEquals(100, dest.mostrar(),0);
 	}
 }
