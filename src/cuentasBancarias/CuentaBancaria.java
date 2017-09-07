@@ -22,7 +22,8 @@ public class CuentaBancaria {
 
 	public void extraer(double monto) {
 		this.cant-=monto;
-		
 	}
+	
+	
 
 }

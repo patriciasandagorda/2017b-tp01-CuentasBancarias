@@ -40,5 +40,7 @@ public class CuentasBancariasTests {
 		cuenta1.depositar(500);
 		cuenta1.extraer(100);
 		Assert.assertEquals(400,cuenta1.mostrar(),0);
+		cuenta1.extraer(1000);
+		Assert.assertEquals(400, cuenta1.mostrar(),0);
 	}
 }
