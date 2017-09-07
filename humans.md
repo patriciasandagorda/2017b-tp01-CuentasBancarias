@@ -1,4 +1,4 @@
-# La gente detrás del proyecto
+﻿# La gente detrás del proyecto
 
 ## Docentes del Taller
 
@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
+* Patricia Sandagorda ([patriciasandagorda](https://github.com/xxx))
 * XXX ([xxx](https://github.com/xxx))
