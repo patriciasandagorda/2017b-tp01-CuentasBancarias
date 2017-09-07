@@ -13,7 +13,12 @@ public class CuentaBancaria {
 	}
 
 	public void transferirMontohacia(double i, CuentaBancaria dest) {
-		dest.cant+=i;
+		
+		if(this.cant>=i)
+			{
+			dest.cant+=i;
+			this.cant-=i;
+			}
 	}
 
 }
