@@ -9,6 +9,7 @@ public class CuentaBancaria {
 	}
 
 	public void depositar(double monto) {
+		if(monto>0)
 		this.cant += monto;
 	}
 
