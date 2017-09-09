@@ -8,9 +8,12 @@ public class CuentaBancaria {
 		return this.cant;
 	}
 
-	public void depositar(double monto) {
-		if (monto > 0)
+	public boolean depositar(double monto) {
+		if (monto > 0){
 			this.cant += monto;
+			return true;
+		}
+		return false;
 	}
 
 	public boolean transferirMontohacia(double monto, CuentaBancaria dest) {
