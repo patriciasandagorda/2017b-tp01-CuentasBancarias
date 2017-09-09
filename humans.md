@@ -7,5 +7,4 @@
 
 ## Estudiantes
 
-* Patricia Sandagorda ([patriciasandagorda](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Patricia Sandagorda ([patriciasandagorda](https://github.com/patriciasandagorda))
