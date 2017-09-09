@@ -31,6 +31,8 @@ public class CuentasBancariasTests {
 		Assert.assertEquals(100, dest.mostrar(),0);
 		cuenta1.transferirMontohacia(145.3546, dest);
 		Assert.assertEquals(245.3546, dest.mostrar(),0.00001);
+		cuenta1.transferirMontohacia(-100, dest);
+		Assert.assertEquals(245.3546, dest.mostrar(),0.00001);
 		
 	}
 	
