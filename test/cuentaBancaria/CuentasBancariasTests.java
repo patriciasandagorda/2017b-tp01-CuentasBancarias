@@ -1,21 +1,27 @@
 package cuentaBancaria;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import cuentasBancarias.CuentaBancaria;
 
 public class CuentasBancariasTests {
-
+	
+	CuentaBancaria cuenta1;
+	
+	@Before
+	public void setUp(){
+		cuenta1=new CuentaBancaria();
+	}
+	
 	@Test
 	public void queInicializa() {
-		CuentaBancaria cuenta1 = new CuentaBancaria();
 		Assert.assertEquals(0, cuenta1.mostrar(), 0);
 	}
 
 	@Test
 	public void queSeLePuedeAgregarDinero() {
-		CuentaBancaria cuenta1 = new CuentaBancaria();
 		cuenta1.depositar(1000);
 		Assert.assertEquals(1000, cuenta1.mostrar(), 0);
 		cuenta1.depositar(-100);
@@ -24,7 +30,6 @@ public class CuentasBancariasTests {
 	
 	@Test
 	public void queSePuedeTransferirAOtraCuenta() {
-		CuentaBancaria cuenta1 = new CuentaBancaria();
 		CuentaBancaria dest = new CuentaBancaria();
 		cuenta1.depositar(1000);
 		cuenta1.transferirMontohacia(100, dest);
@@ -35,12 +40,13 @@ public class CuentasBancariasTests {
 		Assert.assertEquals(245.3546, dest.mostrar(),0.00001);
 		cuenta1.transferirMontohacia(-100, dest);
 		Assert.assertEquals(245.3546, dest.mostrar(),0.00001);
+		cuenta1.transferirMontohacia(900-145.3546, dest);
+		Assert.assertEquals(0, cuenta1.mostrar(),0);
 		
 	}
 	
 	@Test
 	public void queSePuedeRetirar(){
-		CuentaBancaria cuenta1 = new CuentaBancaria();
 		cuenta1.depositar(500);
 		cuenta1.extraer(100);
 		Assert.assertEquals(400,cuenta1.mostrar(),0);
