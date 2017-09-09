@@ -14,7 +14,7 @@ public class CuentaBancaria {
 
 	public boolean transferirMontohacia(double monto, CuentaBancaria dest) {
 
-		if (this.cant >= monto) {
+		if (this.cant >= monto && monto>0) {
 			dest.cant += monto;
 			this.cant -= monto;
 			return true;
