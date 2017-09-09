@@ -18,6 +18,8 @@ public class CuentasBancariasTests {
 		CuentaBancaria cuenta1 = new CuentaBancaria();
 		cuenta1.depositar(1000);
 		Assert.assertEquals(1000, cuenta1.mostrar(), 0);
+		cuenta1.depositar(-100);
+		Assert.assertEquals(1000, cuenta1.mostrar(),0);
 	}
 	
 	@Test
