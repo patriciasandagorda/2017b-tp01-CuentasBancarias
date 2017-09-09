@@ -23,7 +23,7 @@ public class CuentaBancaria {
 	}
 
 	public boolean extraer(double monto) {
-		if (this.cant >= monto) {
+		if (this.cant >= monto && monto > 0) {
 			this.cant -= monto;
 			return true;
 		}
