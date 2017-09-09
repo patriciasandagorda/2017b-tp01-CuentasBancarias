@@ -24,6 +24,7 @@ public class CuentasBancariasTests {
 	public void queSeLePuedeAgregarDinero() {
 		Assert.assertEquals(true, cuenta1.depositar(1000));
 		Assert.assertEquals(false, cuenta1.depositar(-100));
+		Assert.assertEquals(false, cuenta1.depositar(50,"dolares"));
 	}
 	
 	@Test
