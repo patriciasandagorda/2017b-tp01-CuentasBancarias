@@ -12,12 +12,12 @@ public class CuentasBancariasTests {
 	
 	@Before
 	public void setUp(){
-		cuenta1=new CuentaBancaria();
+		cuenta1=new CuentaBancaria(123);
 	}
 	
 	@Test
 	public void queInicializa() {
-		Assert.assertEquals(0, cuenta1.mostrar(), 0);
+		Assert.assertEquals(0, cuenta1.mostrarsaldo(), 0);
 	}
 
 	@Test
@@ -28,7 +28,7 @@ public class CuentasBancariasTests {
 	
 	@Test
 	public void queSePuedeTransferirAOtraCuenta() {
-		CuentaBancaria dest = new CuentaBancaria();
+		CuentaBancaria dest = new CuentaBancaria(456);
 		cuenta1.depositar(1000);
 		Assert.assertEquals(true,cuenta1.transferirMontohacia(100, dest) );
 		Assert.assertEquals(false, cuenta1.transferirMontohacia(1000, dest));

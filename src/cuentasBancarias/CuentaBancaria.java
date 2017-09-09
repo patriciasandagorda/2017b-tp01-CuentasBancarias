@@ -2,15 +2,21 @@ package cuentasBancarias;
 
 public class CuentaBancaria {
 
-	private double cant;
+	private double saldo;
+	public int nroCuenta;
 
-	public double mostrar() {
-		return this.cant;
+	public CuentaBancaria(int nroCuenta) {
+		this.nroCuenta = nroCuenta;
+		this.saldo = 0;
+	}
+
+	public double mostrarsaldo() {
+		return this.saldo;
 	}
 
 	public boolean depositar(double monto) {
-		if (monto > 0){
-			this.cant += monto;
+		if (monto > 0) {
+			this.saldo += monto;
 			return true;
 		}
 		return false;
@@ -18,17 +24,17 @@ public class CuentaBancaria {
 
 	public boolean transferirMontohacia(double monto, CuentaBancaria dest) {
 
-		if (this.cant >= monto && monto > 0) {
-			dest.cant += monto;
-			this.cant -= monto;
+		if (this.saldo >= monto && monto > 0 && this.nroCuenta!=dest.nroCuenta) {
+			dest.saldo += monto;
+			this.saldo -= monto;
 			return true;
 		}
 		return false;
 	}
 
 	public boolean extraer(double monto) {
-		if (this.cant >= monto && monto > 0) {
-			this.cant -= monto;
+		if (this.saldo >= monto && monto > 0) {
+			this.saldo -= monto;
 			return true;
 		}
 		return false;
