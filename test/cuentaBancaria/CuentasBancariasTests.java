@@ -12,7 +12,7 @@ public class CuentasBancariasTests {
 	
 	@Before
 	public void setUp(){
-		cuenta1=new CuentaBancaria(123);
+		cuenta1=new CuentaBancaria(123,"pesos");
 	}
 	
 	@Test
@@ -28,7 +28,7 @@ public class CuentasBancariasTests {
 	
 	@Test
 	public void queSePuedeTransferirAOtraCuenta() {
-		CuentaBancaria dest = new CuentaBancaria(456);
+		CuentaBancaria dest = new CuentaBancaria(456,"pesos");
 		cuenta1.depositar(1000);
 		Assert.assertEquals(true,cuenta1.transferirMontohacia(100, dest) );
 		Assert.assertEquals(false, cuenta1.transferirMontohacia(1000, dest));
@@ -37,7 +37,8 @@ public class CuentasBancariasTests {
 		Assert.assertEquals(true, cuenta1.transferirMontohacia(900-145.3546, dest));
 		cuenta1.depositar(1000);
 		Assert.assertEquals(false, cuenta1.transferirMontohacia(500, cuenta1));
-		CuentaBancaria dolares=new CuentaBancaria(789,dolares);
+		CuentaBancaria cuentaDolares=new CuentaBancaria(789,"dolares");
+		Assert.assertEquals(false, cuenta1.transferirMontohacia(100, cuentaDolares));
 		
 	}
 	
