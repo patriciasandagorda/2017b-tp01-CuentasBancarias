@@ -16,8 +16,8 @@ public class CuentaBancaria {
 		return this.saldo;
 	}
 
-	public boolean depositar(double monto) {
-		if (monto > 0) {
+	public boolean depositar(double monto, String moneda) {
+		if (monto > 0 && this.moneda==moneda) {
 			this.saldo += monto;
 			return true;
 		}
